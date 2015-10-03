@@ -22,3 +22,8 @@ not have been released).
 
 If you want to edit the packages, change the version number and therefore the
 file-name.
+
+To create a new package, see the ``nipy-examplepkg`` directory.  This contains
+the layout for a data package in the format that nipy uses.  If you are
+thinking of making a new data package to work with nipy, this is a good place
+to start.
