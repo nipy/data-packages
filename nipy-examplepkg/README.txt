@@ -10,7 +10,6 @@ To rebuild this package for distribution:
 
 Then::
 
-   python setup.py sdist
+   python -m build . --sdist
 
-And upload the generated file for release. 
-
+And upload the generated file for release.

@@ -7,10 +7,7 @@ from os.path import join as pjoin
 
 from distutils.core import setup
 
-try:
-    import ConfigParser as cfg # Python 2
-except ImportError:
-    import configparser as cfg # Python 3
+import configparser as cfg
 
 # The directory under --prefix, under which to store files
 OUTPUT_BASE = pjoin('share', 'nipy', 'nipy')
@@ -25,7 +22,7 @@ for dirpath, dirnames, filenames in os.walk(PKG_BASE):
     files = [pjoin(dirpath, filename) for filename in filenames]
     DATA_FILES.append((pjoin(OUTPUT_BASE, dirpath), files))
 
-config = cfg.SafeConfigParser()
+config = cfg.ConfigParser()
 config.read(pjoin(PKG_BASE, 'config.ini'))
 
 setup(
